@@ -1,0 +1,33 @@
+::first-letter {
+  text-transform: uppercase;
+}
+div{
+  height: 200px;
+  width: 200px;
+  background-color: black;
+  margin: 50px auto;
+  border-radius: 50%;
+  border: red 7px solid;
+  border-left-color: transparent;
+  animation-name: loading-circle;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div::after{
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
+  font-size: 2em;
+}
+@keyframes loading-circle{
+  to{
+    transform: rotateZ(1turn);
+  }
+}
